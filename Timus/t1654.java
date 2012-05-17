@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Stack;
+import java.util.ArrayList;
 
 public class t1654 {
 
@@ -8,34 +8,52 @@ public class t1654 {
 
 		while (input.hasNext()) {
 			String cipheredMessage = input.nextLine();
-
 			decipher(cipheredMessage);
 		}
 	}
 
 	public static void decipher(String cipheredMessage) {
-		Stack<Character> decipherMachine = new Stack<Character>();
-		
-		for(int i = cipheredMessage.length() - 1; i >= 0; --i){
-			if(!decipherMachine.empty()){
-				if(decipherMachine.peek().equals(cipheredMessage.charAt(i))){
-					decipherMachine.pop();
+		MyStack<Character> decipherStack = new MyStack<Character>();
+
+		for (int i = cipheredMessage.length() - 1; i >= 0; --i) {
+			if (decipherStack.isEmpty()) {
+				decipherStack.push(cipheredMessage.charAt(i));
+			}
+			else {
+				if (cipheredMessage.charAt(i) == decipherStack.peek()) {
+					decipherStack.pop();
 				}
 				else{
-					decipherMachine.push(cipheredMessage.charAt(i));
+					decipherStack.push(cipheredMessage.charAt(i));
 				}
 			}
-			else{
-				decipherMachine.push(cipheredMessage.charAt(i));
-			}
 		}
-		
-		
-		while(!decipherMachine.empty()){
-			System.out.print(decipherMachine.pop());
+
+		while (!decipherStack.isEmpty()) {
+			System.out.print(decipherStack.pop());
 		}
-		
 		System.out.println();
 	}
+}
 
+class MyStack<E> {
+	ArrayList<E> content = new ArrayList<E>();
+
+	public boolean isEmpty() {
+		return content.isEmpty();
+	}
+
+	public E peek() {
+		return content.get(content.size() - 1);		
+	}
+
+	public E push(E e) {
+		content.add(e);		
+		return e;
+	}
+
+	public E pop() {
+		E e = content.remove(content.size() - 1);
+		return e;
+	}
 }
