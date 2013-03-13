@@ -16,13 +16,13 @@ public class a007 {
 				if ((checkNum % i) != 0) {
 					continue;
 				} else {
-					System.out.println("éžè³ªæ•¸");
+					System.out.println("«D½è¼Æ");
 					break;
 				}
 			}
 
 			if (i > Math.sqrt(checkNum)) {
-				System.out.println("è³ªæ•¸");
+				System.out.println("½è¼Æ");
 			}
 		}
 
