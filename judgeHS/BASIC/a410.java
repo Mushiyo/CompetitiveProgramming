@@ -1,3 +1,4 @@
+// WA
 package BASIC;
 
 import java.util.Scanner;
