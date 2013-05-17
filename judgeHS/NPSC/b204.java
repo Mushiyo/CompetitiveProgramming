@@ -1,3 +1,5 @@
+package NPSC;
+
 import java.util.Scanner;
 
 public class b204 {
