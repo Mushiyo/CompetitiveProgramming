@@ -5,6 +5,9 @@
 	<classpathentry kind="src" path="judgeHS"/>
 	<classpathentry kind="src" path="Data Structures &amp; Algorithms"/>
 	<classpathentry kind="src" path="UVa"/>
+	<classpathentry kind="src" path="HDOJ"/>
+	<classpathentry kind="src" path="JavaExample"/>
+	<classpathentry kind="src" path="TopCoder"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

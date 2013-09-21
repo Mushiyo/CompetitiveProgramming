@@ -1,4 +1,3 @@
-package DsAndAlgo;
 import java.util.Iterator;
 
 public abstract class AbstractTree<E extends Comparable<E>> implements Tree<E> {

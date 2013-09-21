@@ -1,4 +1,3 @@
-package DsAndAlgo;
 import java.util.Iterator;
 
 public interface Tree<E extends Comparable<E>> {
