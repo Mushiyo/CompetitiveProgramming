@@ -1,7 +1,8 @@
+package UVa;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class u490 {
+public class c045 {
 
 	public static void main(String[] args) {
 		ArrayList<String> sentences = new ArrayList<String>();
