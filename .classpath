@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="USACO"/>
 	<classpathentry kind="src" path="Timus"/>
 	<classpathentry kind="src" path="judgeHS"/>
-	<classpathentry kind="src" path="Data Structures &amp; Algorithms"/>
+	<classpathentry kind="src" path="DataStructures&amp;Algorithms"/>
 	<classpathentry kind="src" path="UVa"/>
 	<classpathentry kind="src" path="HDOJ"/>
 	<classpathentry kind="src" path="JavaExample"/>
