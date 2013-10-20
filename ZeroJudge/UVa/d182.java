@@ -9,7 +9,6 @@ public class d182 {
 		
 		while(input.hasNext()){
 			int N = input.nextInt();
-			//int upperBound = (int)Math.pow(10, N);
 			int halfBound = (int)Math.pow(10, N / 2);
 			
 			for(int i = 0; i < halfBound; ++i){
