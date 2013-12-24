@@ -9,7 +9,6 @@ public class UVa11520 {
 	final static int DIRECTION = 4;
 	final static int[] dx = { 0, -1, 1, 0 };
 	final static int[] dy = { -1, 0, 0, 1 };
-
 	// the 4 direction left, up, down, right
 
 	public static char fillChar(char[][] grid, int x, int y){
