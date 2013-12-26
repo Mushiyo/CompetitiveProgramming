@@ -1,4 +1,4 @@
-/* Filename: UVa364.java
+/* Filename: UVa382.java
  * Author: Mushiyo
  */
 
