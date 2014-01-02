@@ -1,28 +1,28 @@
 // TLE
-/* Filename: a638.java
+/* Filename: UVa10245.java
  * Author: Mushiyo
  */
-package ORIGINAL;
 
-import java.util.Scanner;
-import java.util.Comparator;
-import java.util.Map;
-import java.util.HashMap;
+import java.awt.geom.Point2D;
 import java.util.Arrays;
-import java.awt.Point;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
-public class a638 {
+public class UVa10245 {
 	static PointComparator xMajor = new PointComparator(true);
 	static PointComparator yMajor = new PointComparator(false);
-	final static int MAX_N = 3000000 + 1;
-	static Point[] xOrdered = new Point[MAX_N];
-	static Point[] yOrdered = new Point[MAX_N];
-	static Point[] lInRange = new Point[MAX_N];
-	static Point[] rInRange = new Point[MAX_N];
-	static Point[] yOrderedSepByX = new Point[MAX_N];
-	static Point[] tmp;
-	static Map<Point, Integer> posInX = new HashMap<Point, Integer>();
+	final static int MAX_N = 10000;
+	static Point2D.Double[] xOrdered = new Point2D.Double[MAX_N];
+	static Point2D.Double[] yOrdered = new Point2D.Double[MAX_N];
+	static Point2D.Double[] lInRange = new Point2D.Double[MAX_N];
+	static Point2D.Double[] rInRange = new Point2D.Double[MAX_N];
+	static Point2D.Double[] yOrderedSepByX = new Point2D.Double[MAX_N];
+	static Point2D.Double[] tmp;
+	static Map<Point2D.Double, Integer> posInX = new HashMap<Point2D.Double, Integer>();
 	final static double INF = Double.MAX_VALUE;
+	final static double UP_BOUND = 10000;
 
 	public static void main(String[] args) {
 
@@ -30,9 +30,12 @@ public class a638 {
 
 		while (input.hasNext()) {
 			int N = input.nextInt();
+			if(N == 0){
+				break;
+			}			
 
 			for (int i = 0; i < N; ++i) {
-				xOrdered[i] = new Point(input.nextInt(), input.nextInt());
+				xOrdered[i] = new Point2D.Double(input.nextDouble(), input.nextDouble());
 			}
 			Arrays.sort(xOrdered, 0, N, xMajor);
 
@@ -45,12 +48,17 @@ public class a638 {
 			Arrays.sort(yOrdered, 0, N, yMajor);
 
 			double minDist = closestPairDist(yOrdered, 0, N);
-
-			System.out.printf("%.4f\n", minDist);
+			
+			if(minDist < UP_BOUND){
+				System.out.printf("%.4f\n", minDist);
+			}
+			else{
+				System.out.println("INFINITY");
+			}
 		}
 	}
 
-	static double closestPairDist(Point[] Y, int L, int R) { // [L,R)
+	static double closestPairDist(Point2D.Double[] Y, int L, int R) { // [L,R)
 		if (R - L == 1) {
 			return INF;
 		} else if (R - L == 2) {
@@ -61,8 +69,8 @@ public class a638 {
 
 			// divide y into half by their x value
 			int lHead = 0, rHead = 0;
-			Point[] yL = new Point[M - L];
-			Point[] yR = new Point[R - M];
+			Point2D.Double[] yL = new Point2D.Double[M - L];
+			Point2D.Double[] yR = new Point2D.Double[R - M];
 			for (int i = 0; i < R - L; ++i) {
 				if (posInX.get(Y[i]) < M) {
 					yL[lHead++] = Y[i];
@@ -79,10 +87,10 @@ public class a638 {
 		}
 	}
 
-	static double merge(Point[] yL, Point[] yR, int L, int M, int R, double d) {
+	static double merge(Point2D.Double[] yL, Point2D.Double[] yR, int L, int M, int R, double d) {
 		double divideLine = (double) (xOrdered[M - 1].x + xOrdered[M].x) / 2;
 		double minDist = d;
-		
+
 		int lInRangeLen = 0;
 		for (int i = 0; i < yL.length; ++i) {
 			if (yL[i].x >= divideLine - d) {
@@ -120,7 +128,7 @@ public class a638 {
 		return minDist;
 	}
 
-	static class PointComparator implements Comparator<Point> {
+	static class PointComparator implements Comparator<Point2D.Double> {
 		boolean xMajor = true;
 		boolean aScendingOrder = true;
 
@@ -136,7 +144,7 @@ public class a638 {
 		@Override
 		// compare p1 & p2, the result can vary depending the major axis and
 		// sorting order
-		public int compare(Point p1, Point p2) {
+		public int compare(Point2D.Double p1, Point2D.Double p2) {
 			if (aScendingOrder) {
 				if (xMajor) {
 					if (p1.x != p2.x) {
