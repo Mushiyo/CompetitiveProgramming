@@ -1,5 +1,5 @@
-//RE
 import java.util.Scanner;
+import java.math.BigInteger;
 
 public class UVa713 {
 
@@ -10,10 +10,12 @@ public class UVa713 {
 		while(N > 0){
 			StringBuilder num1Str = new StringBuilder(input.next());
 			StringBuilder num2Str = new StringBuilder(input.next());
-			int revAddResult = Integer.parseInt(num1Str.reverse().toString()) + Integer.parseInt(num2Str.reverse().toString());
-			StringBuilder result = new StringBuilder(String.valueOf(revAddResult)).reverse();
+			BigInteger num1Rev = new BigInteger(num1Str.reverse().toString());
+			BigInteger num2Rev = new BigInteger(num2Str.reverse().toString());
+			BigInteger revAddResult = num1Rev.add(num2Rev);
+			StringBuilder result = new StringBuilder(revAddResult.toString()).reverse();
 			
-			System.out.println(Integer.parseInt(result.toString()));
+			System.out.println(new BigInteger(result.toString()));
 			
 			--N;
 		}
