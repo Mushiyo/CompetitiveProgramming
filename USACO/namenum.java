@@ -55,6 +55,7 @@ public class namenum {
 			}
 		}
 		
+		dictFile.close();
 		input.close();
 		output.close();
 	}

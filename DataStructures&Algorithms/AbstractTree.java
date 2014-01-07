@@ -19,7 +19,7 @@ public abstract class AbstractTree<E extends Comparable<E>> implements Tree<E> {
     }
     
     //return an iterator to traverse elements in the tree
-    public Iterator iterator(){
+    public Iterator<E> iterator(){
     	return null;
     }
 }

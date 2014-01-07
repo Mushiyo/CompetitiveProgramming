@@ -28,5 +28,5 @@ public interface Tree<E extends Comparable<E>> {
     public boolean isEmpty();
     
     //return an iterator to traverse elements in the tree
-    public Iterator iterator();
+    public Iterator<E> iterator();
 }

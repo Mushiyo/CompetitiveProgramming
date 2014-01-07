@@ -127,7 +127,7 @@ public class BinaryTree<E extends Comparable<E>> extends AbstractTree<E> {
     	return size;
     }
     
-    public TreeNode getRoot(){
+    public TreeNode<E> getRoot(){
     	return root;
     }
     
@@ -211,15 +211,15 @@ public class BinaryTree<E extends Comparable<E>> extends AbstractTree<E> {
     	return true;
     }
     
-    public Iterator iterator(){
+    public Iterator<E> iterator(){
     	return inorderIterator();
     }
     
-    public Iterator inorderIterator(){
+    public Iterator<E> inorderIterator(){
     	return new InorderIterator();
     }
     
-    class InorderIterator implements Iterator{
+    class InorderIterator implements Iterator<E>{
     	private ArrayList<E> list = new ArrayList<E>();
     	private int current = 0;
     	
@@ -249,7 +249,7 @@ public class BinaryTree<E extends Comparable<E>> extends AbstractTree<E> {
     		return false;
     	}
     	
-    	public Object next(){
+    	public E next(){
     		return list.get(current++);
     	}
     	

@@ -17,8 +17,8 @@ public class d526 {
 				M[i] = input.nextInt();
 			}
 			
-			BinaryTree tree = new BinaryTree<Integer>(M);
-			Iterator iterate = tree.preorderIterator();
+			BinaryTree<Integer> tree = new BinaryTree<Integer>(M);
+			Iterator<Integer> iterate = tree.preorderIterator();
 			while(iterate.hasNext()){
 				if(N > 1){
 				    System.out.print(iterate.next() + " ");
@@ -50,7 +50,7 @@ interface Tree<E extends Comparable<E>> {
     public boolean isEmpty();
     
     //return an iterator to traverse elements in the tree
-    public Iterator iterator();
+    public Iterator<E> iterator();
 }
 
 abstract class AbstractTree<E extends Comparable<E>> implements Tree<E> {
@@ -60,7 +60,7 @@ abstract class AbstractTree<E extends Comparable<E>> implements Tree<E> {
     }
     
     //return an iterator to traverse elements in the tree
-    public Iterator iterator(){
+    public Iterator<E> iterator(){
     	return null;
     }
 }
@@ -149,7 +149,7 @@ class BinaryTree<E extends Comparable<E>> extends AbstractTree<E> {
     	return size;
     }
     
-    public TreeNode getRoot(){
+    public TreeNode<E> getRoot(){
     	return root;
     }
     
@@ -233,15 +233,15 @@ class BinaryTree<E extends Comparable<E>> extends AbstractTree<E> {
     	return true;
     }
     
-    public Iterator iterator(){
+    public Iterator<E> iterator(){
     	return preorderIterator();
     }
     
-    public Iterator preorderIterator(){
+    public Iterator<E> preorderIterator(){
     	return new PreorderIterator();
     }
     
-    class PreorderIterator implements Iterator{
+    class PreorderIterator implements Iterator<E>{
     	private ArrayList<E> list = new ArrayList<E>();
     	private int current = 0;
     	
@@ -271,7 +271,7 @@ class BinaryTree<E extends Comparable<E>> extends AbstractTree<E> {
     		return false;
     	}
     	
-    	public Object next(){
+    	public E next(){
     		return list.get(current++);
     	}
     	

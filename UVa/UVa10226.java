@@ -1,3 +1,4 @@
+//TLE
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -8,6 +9,9 @@ import java.util.TreeSet;
 public class UVa10226 {
 
 	public static void main(String[] args) {
+		Map<String, Integer> plantRecord = new HashMap<String, Integer>();
+		Set<String> plantTypes = new TreeSet<String>();
+		Iterator<String> it;
 		Scanner input = new Scanner(System.in);
 
 		while (input.hasNext()) {
@@ -16,8 +20,8 @@ public class UVa10226 {
 			input.nextLine(); // eat the first empty line 
 
 			while (n > 0) {
-				Map<String, Integer> plantRecord = new HashMap<String, Integer>();
-				Set<String> plantTypes = new TreeSet<String>();
+				plantRecord.clear();
+				plantTypes.clear();
 				int countPlant = 0;
 				
 				while (true && input.hasNext()) {
@@ -40,7 +44,7 @@ public class UVa10226 {
 					++countPlant;
 				}
 				
-				Iterator<String> it = plantTypes.iterator();
+				it = plantTypes.iterator();
 				while(it.hasNext()){
 					String plantName = it.next();
 					double appearTimes =plantRecord.get(plantName); 

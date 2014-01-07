@@ -1,4 +1,3 @@
-//RE
 import java.util.Scanner;
 
 public class UVa11608 {
@@ -10,7 +9,7 @@ public class UVa11608 {
 		while(input.hasNext()){
 			int S = input.nextInt();
 			
-			if(S == -1){
+			if(S < 0){
 				break;
 			}
 			System.out.println("Case " + caseNum + ":");
