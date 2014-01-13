@@ -6,6 +6,7 @@ public class UVa489 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		StringBuilder output = new StringBuilder();
 
 		while (input.hasNext()) {
 			int n = input.nextInt();
@@ -48,17 +49,18 @@ public class UVa489 {
 				}
 			}
 			
-			System.out.println("Round " + n);
+			output.append("Round " + n + "\n");
 			if(win){
-				System.out.println("You win.");
+				output.append("You win.\n");
 			}
 			else if (hangMan != 7){
-				System.out.println("You chickened out.");
+				output.append("You chickened out.\n");
 			}
 			else{
-				System.out.println("You lose.");
+				output.append("You lose.\n");
 			}
 		}
+		System.out.print(output);
 	}
 
 }
