@@ -1,3 +1,7 @@
+/* Filename: UVa489.java
+ * Author: Mushiyo
+ */
+
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;

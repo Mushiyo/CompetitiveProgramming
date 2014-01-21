@@ -1,5 +1,3 @@
-// TLE
-
 /* Filename: UVa410.java
  * Author: Mushiyo
  */

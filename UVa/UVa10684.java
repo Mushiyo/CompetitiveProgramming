@@ -17,7 +17,7 @@ public class UVa10684 {
 				bet[i] = input.nextInt(); 
 			}
 			
-			int minJackpot = bet[0];
+			int minJackpot = Math.min(0, bet[0]);
 			int maxJackpot = bet[0];
 			int jackpot = bet[0];
 			for(int i = 1; i < N; ++i){
