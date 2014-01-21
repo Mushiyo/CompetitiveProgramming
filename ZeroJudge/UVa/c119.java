@@ -7,34 +7,22 @@ public class c119 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		
-		while(input.hasNext()){
-			int n = input.nextInt();
-			
-			System.out.println(nFactorialSum(n));
-		}
-	}
-	
-	public static int nFactorialSum(int n){
-		String factorial = bigFactorial(n);
-		int sum = 0;
-		
-		for(int i = 0; i < factorial.length(); ++i){
-			sum += Character.getNumericValue(factorial.charAt(i));
-		}
-		
-		return sum;
-	}
-	
-	public static String bigFactorial(int n){
-		BigInteger factorial = new BigInteger("2");
-		
-		for(int i = 1; i <= n; ++i){
-			BigInteger bigI = new BigInteger(Integer.toString(i));
-			factorial.multiply(bigI);
-		}
-		
-		return factorial.toString();
-	}
 
+		while (input.hasNext()) {
+			int n = input.nextInt();
+
+			BigInteger factorial = BigInteger.valueOf(1);
+			for (int i = 2; i <= n; ++i) {
+				factorial = factorial.multiply(BigInteger.valueOf(i));
+			}
+
+			int sumDigit = 0;
+			String factorialStr = factorial.toString();
+			for (int i = 0; i < factorialStr.length(); ++i) {
+				sumDigit += factorialStr.charAt(i) - '0';
+			}
+
+			System.out.println(sumDigit);
+		}
+	}
 }
