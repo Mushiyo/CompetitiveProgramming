@@ -42,7 +42,6 @@ public class UVa574 {
 	}
 
 	static void findSum(int t, int index, List<Integer> solution) {
-		// System.out.println("T & I: " + t + " " + index);
 		if (t == 0) {
 			System.out.print(solution.get(0));
 			for (int i = 1; i < solution.size(); ++i) {
