@@ -1,8 +1,10 @@
-//TLE & RE
+//TLE
 
 package BASIC;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.Queue;
 
@@ -10,62 +12,66 @@ public class a290 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-
-		while (input.hasNext()) {
+		
+		while(input.hasNext()){
 			int N = input.nextInt();
 			int M = input.nextInt();
-
-			boolean[][] roads = new boolean[N + 1][M];
-
-			boolean[] visited = new boolean[N + 1];
-
-			while (M > 0) {
+			
+			List<ArrayList<Integer>> roads = new ArrayList<ArrayList<Integer>>(N + 1);
+			for(int i = 0; i < N + 1; ++i){
+				roads.add(new ArrayList<Integer>());
+			}
+			
+			boolean[] visited = new boolean[roads.size()];
+			
+			while(M > 0){
 				int a = input.nextInt();
 				int b = input.nextInt();
-
-				roads[a][b] = true;
-
+				
+				roads.get(a).add(b);
+				
 				--M;
 			}
-
+			
 			int A = input.nextInt();
 			int B = input.nextInt();
-
-			if (isReachable(A, B, roads, visited) == true) {
+			
+			if(isReachable(A, B, roads, visited)){
 				System.out.println("Yes!!!");
-			} else {
+			}
+			else{
 				System.out.println("No!!! ");
 			}
-
-		}
-
+			
+		}	
+		
 	}
-
-	static boolean isReachable(int startCity, int targetCity,
-			boolean[][] roads, boolean[] visited) {
+	
+	static boolean isReachable(int startCity, int targetCity, List<ArrayList<Integer>> roads, boolean[] visited){
 		Queue<Integer> toBeVisit = new LinkedList<Integer>();
 		toBeVisit.add(startCity);
 
-		while (!toBeVisit.isEmpty()) {
+		while(!toBeVisit.isEmpty()){
 			int currentCity = toBeVisit.poll();
-
-			if (currentCity == targetCity) {
+			
+			if(currentCity == targetCity){
 				return true;
 			}
-
-			for (int i = 0; i < roads[currentCity].length; ++i) {
-				if (roads[currentCity][i] == true) {
-					int neighborCity = i;
-					if (!visited[neighborCity]) {
-						toBeVisit.add(neighborCity);
-						visited[neighborCity] = true;
-					}
+			
+			for(int i = 0; i < roads.get(currentCity).size(); ++i){
+				int neighborCity = roads.get(currentCity).get(i);
+				
+				if(neighborCity == targetCity){
+					return true;
+				}
+				
+				if(!visited[neighborCity]){
+					toBeVisit.add(neighborCity);
+					visited[neighborCity] = true;
 				}
 			}
-
 		}
-
+		
 		return false;
 	}
-
 }

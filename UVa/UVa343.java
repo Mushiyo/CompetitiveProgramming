@@ -32,9 +32,6 @@ public class UVa343 {
 					num2InDifferentBase[base] = -1;
 				}
 			}
-			
-			//System.out.println(Arrays.toString(num1InDifferentBase));
-			//System.out.println(Arrays.toString(num2InDifferentBase));
 
 			boolean isEqualBaseFound = false;
 			int base1 = 2, base2 = 2;
