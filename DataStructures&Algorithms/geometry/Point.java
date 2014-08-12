@@ -1,7 +1,7 @@
 /* Filename: Point.java
  * Author: Mushiyo
  */
-package ComputationalGeometry;
+package geometry;
 
 public class Point implements Comparable {
 	static boolean xMajor = true;

@@ -1,7 +1,7 @@
 /* Filename: PointComparator.java
  * Author: Mushiyo
  */
-package ComputationalGeometry;
+package geometry;
 
 import java.util.Comparator;
 import java.awt.Point;
