@@ -7,7 +7,7 @@
  * algorithms.
  */
 
-package Math4;
+package math;
 
 import java.util.ArrayList;
 
@@ -72,33 +72,36 @@ public class NumberTheory {
 	}
 
 	/**
-	 * Return a list of primes between 1 ~ {@code upper bound}. Primes are find
+	 * Return a list of primes between {@code lower bound} ~ {@code upper bound}. Primes are find
 	 * with the sieve of Eratosthenes.
 	 * 
-	 * @param upperbound
+	 * @param lowerBound
+	 *            the number which the first prime in the returned list large than or
+	 *            equals to.
+	 * @param upperBound
 	 *            the number which the last prime in the returned list does not
 	 *            exceed.
 	 * @return a list of primes between 1 ~ {@code upper bound}.
 	 */
-	public static ArrayList<Integer> primeListOfRange(int upperbound) {
-		boolean[] isPrime = new boolean[upperbound];
+	public static ArrayList<Integer> primeListOfRange(int lowerBound, int upperBound) {
+		boolean[] isPrime = new boolean[upperBound];
 
-		for (int i = 2; i < upperbound; ++i) {
+		for (int i = 2; i < upperBound; ++i) {
 			isPrime[i] = true;
 		}
 
-		int sqrtSize = (int) Math.sqrt(upperbound) + 1;
+		int sqrtSize = (int) Math.sqrt(upperBound) + 1;
 
 		for (int i = 2; i < sqrtSize; ++i) {
 			if (isPrime[i] == true) {
-				for (int j = i * i; j < upperbound; j += i) {
+				for (int j = i * i; j < upperBound; j += i) {
 					isPrime[j] = false;
 				}
 			}
 		}
 
 		ArrayList<Integer> prime = new ArrayList<Integer>();
-		for (int i = 2; i < upperbound; ++i) {
+		for (int i = 2; i < upperBound; ++i) {
 			if (isPrime[i]) {
 				prime.add(i);
 			}
@@ -115,25 +118,25 @@ public class NumberTheory {
 	 *            the size of the list of primes.
 	 * @return a list of primes with the specific size  
 	 */
-	public static ArrayList<Integer> primeList(int upperbound) {
-		boolean[] isPrime = new boolean[upperbound];
+	public static ArrayList<Integer> primeList(int upperBound) {
+		boolean[] isPrime = new boolean[upperBound];
 
-		for (int i = 2; i < upperbound; ++i) {
+		for (int i = 2; i < upperBound; ++i) {
 			isPrime[i] = true;
 		}
 
-		int sqrtSize = (int) Math.sqrt(upperbound) + 1;
+		int sqrtSize = (int) Math.sqrt(upperBound) + 1;
 
 		for (int i = 2; i < sqrtSize; ++i) {
 			if (isPrime[i] == true) {
-				for (int j = i * i; j < upperbound; j += i) {
+				for (int j = i * i; j < upperBound; j += i) {
 					isPrime[j] = false;
 				}
 			}
 		}
 
 		ArrayList<Integer> prime = new ArrayList<Integer>();
-		for (int i = 2; i < upperbound; ++i) {
+		for (int i = 2; i < upperBound; ++i) {
 			if (isPrime[i]) {
 				prime.add(i);
 			}
