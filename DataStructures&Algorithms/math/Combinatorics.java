@@ -25,7 +25,7 @@ public class Combinatorics {
 	}
 
 	public static long combination(int n, int m) {
-		int c = 1;
+		long c = 1;
 
 		for (int i = Math.max(m, n - m) + 1, j = 1; i <= n; ++i, ++j) {
 			c = (c * i) / j;
