@@ -9,7 +9,9 @@
 
 package math;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class NumberTheory {
 
@@ -39,6 +41,10 @@ public class NumberTheory {
 	 */
 	public static long gcd(long a, long b) {
 		return b == 0 ? a : gcd(b, a % b);
+	}
+	
+	public static BigInteger gcd(BigInteger a, BigInteger b) {
+		return a.gcd(b);
 	}
 
 	/**
@@ -70,7 +76,12 @@ public class NumberTheory {
 	public static long lcm(long a, long b) {
 		return a / gcd(a, b) * b;
 	}
+	
+	public static BigInteger lcm(BigInteger a, BigInteger b) {
+		return a.divide(a.gcd(b)).multiply(b);
+	}
 
+	// !!! under construction
 	/**
 	 * Return a list of primes between {@code lower bound} ~ {@code upper bound}. Primes are find
 	 * with the sieve of Eratosthenes.
@@ -86,9 +97,7 @@ public class NumberTheory {
 	public static ArrayList<Integer> primeListOfRange(int lowerBound, int upperBound) {
 		boolean[] isPrime = new boolean[upperBound];
 
-		for (int i = 2; i < upperBound; ++i) {
-			isPrime[i] = true;
-		}
+		Arrays.fill(isPrime, 2, upperBound, true);
 
 		int sqrtSize = (int) Math.sqrt(upperBound) + 1;
 
@@ -121,9 +130,7 @@ public class NumberTheory {
 	public static ArrayList<Integer> primeList(int upperBound) {
 		boolean[] isPrime = new boolean[upperBound];
 
-		for (int i = 2; i < upperBound; ++i) {
-			isPrime[i] = true;
-		}
+		Arrays.fill(isPrime, 2, upperBound, true);
 
 		int sqrtSize = (int) Math.sqrt(upperBound) + 1;
 
@@ -144,4 +151,8 @@ public class NumberTheory {
 
 		return prime;
 	}
+	
+//	public static void main(String[] args) {
+//		primeList(100000000);
+//	}
 }

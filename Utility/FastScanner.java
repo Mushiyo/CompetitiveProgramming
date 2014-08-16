@@ -2,12 +2,17 @@
  * Source: http://dom8a.ru/java/template/A.java
  */
 
+/* known issue
+ * 1. The BufferReader.readLine() behaves differently with
+ *    Scanner.nextLine(), thus the nextLine() method must fixed 
+ */
 import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -18,19 +23,39 @@ public class FastScanner {
 	BufferedReader br;
 	StringTokenizer st;
 
-	FastScanner() {
+	public FastScanner() {
 		br = new BufferedReader(new InputStreamReader(System.in));
 	}
+	
+	public FastScanner(InputStream is) {
+		br = new BufferedReader(new InputStreamReader(is));
+	}
 
-	FastScanner(File f) {
+	public FastScanner(File f) {
 		try {
 			br = new BufferedReader(new FileReader(f));
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
 	}
+	
+	// source: http://codeforces.ru/blog/entry/7805#comment-134954
+	public boolean hasNext() {
+		while (st == null || !st.hasMoreTokens()) {
+			try {
+				String line = br.readLine();
+				if (line == null) {
+					return false;
+				}
+				st = new StringTokenizer(line);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+		}	
+		return true;
+	}
 
-	String nextLine() {
+	public String nextLine() {
 		String ret = null;
 		try {
 			ret = br.readLine();
@@ -41,7 +66,7 @@ public class FastScanner {
 		return ret;
 	}
 
-	String next() {
+	public String next() {
 		while (st == null || !st.hasMoreTokens()) {
 			try {
 				st = new StringTokenizer(br.readLine());
@@ -52,19 +77,19 @@ public class FastScanner {
 		return st.nextToken();
 	}
 
-	int nextInt() {
+	public int nextInt() {
 		return Integer.parseInt(next());
 	}
 
-	long nextLong() {
+	public long nextLong() {
 		return Long.parseLong(next());
 	}
 
-	double nextDouble() {
+	public double nextDouble() {
 		return Double.parseDouble(next());
 	}
 
-	int[] nextIntArray(int size) {
+	public int[] nextIntArray(int size) {
 		int[] array = new int[size];
 
 		for (int i = 0; i < size; i++) {
@@ -74,7 +99,7 @@ public class FastScanner {
 		return array;
 	}
 
-	long[] nextLongArray(int size) {
+	public long[] nextLongArray(int size) {
 		long[] array = new long[size];
 
 		for (int i = 0; i < size; i++) {
@@ -84,17 +109,17 @@ public class FastScanner {
 		return array;
 	}
 
-	BigInteger nextBigInteger() {
+	public BigInteger nextBigInteger() {
 		return new BigInteger(next());
 	}
 
-	Point nextIntPoint() {
+	public Point nextIntPoint() {
 		int x = nextInt();
 		int y = nextInt();
 		return new Point(x, y);
 	}
 
-	Point[] nextIntPointArray(int size) {
+	public Point[] nextIntPointArray(int size) {
 		Point[] array = new Point[size];
 
 		for (int index = 0; index < size; ++index) {
@@ -104,7 +129,7 @@ public class FastScanner {
 		return array;
 	}
 
-	List<Integer>[] readGraph(int vertexNumber, int edgeNumber,
+	public List<Integer>[] readGraph(int vertexNumber, int edgeNumber,
 			boolean undirected) {
 		List<Integer>[] graph = new List[vertexNumber];
 
