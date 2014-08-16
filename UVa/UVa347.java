@@ -4,15 +4,58 @@
  * Author: Mushiyo
  */
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class UVa347 {
 	static boolean[] posUsed = new boolean[10];
 	static boolean[] digitUsed = new boolean[10];
+	
+	private static class FastScanner {
+		BufferedReader br;
+		StringTokenizer st;
+		
+		public FastScanner(InputStream is) {
+			br = new BufferedReader(new InputStreamReader(is));
+		}
+		
+		public boolean hasNext() {
+			while (st == null || !st.hasMoreTokens()) {
+				try {
+					String line = br.readLine();
+					if (line == null) {
+						return false;
+					}
+					st = new StringTokenizer(line);
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
+			}	
+			return true;
+		}
+		
+		public String next() {
+			while (st == null || !st.hasMoreTokens()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+		
+		public int nextInt() {
+			return Integer.parseInt(next());
+		}
+	}
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
+		FastScanner input = new FastScanner(System.in);
 		StringBuilder output = new StringBuilder();
 		int caseNum = 1;
 

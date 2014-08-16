@@ -1,16 +1,64 @@
-// TLE
+// RE
 /* Filename: UVa10245.java
  * Author: Mushiyo
  */
 
 import java.awt.geom.Point2D;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 public class UVa10245 {
+	private static class FastScanner {
+		BufferedReader br;
+		StringTokenizer st;
+		
+		public FastScanner(InputStream is) {
+			br = new BufferedReader(new InputStreamReader(is));
+		}
+		
+		public boolean hasNext() {
+			while (st == null || !st.hasMoreTokens()) {
+				try {
+					String line = br.readLine();
+					if (line == null) {
+						return false;
+					}
+					st = new StringTokenizer(line);
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+				}
+			}	
+			return true;
+		}
+		
+		public String next() {
+			while (st == null || !st.hasMoreTokens()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+			return st.nextToken();
+		}
+
+		public int nextInt() {
+			return Integer.parseInt(next());
+		}
+		
+		public double nextDouble() {
+			return Double.parseDouble(next());
+		}
+	}
+	
 	static PointComparator xMajor = new PointComparator(true);
 	static PointComparator yMajor = new PointComparator(false);
 	final static int MAX_N = 10000;
@@ -26,7 +74,8 @@ public class UVa10245 {
 
 	public static void main(String[] args) {
 
-		Scanner input = new Scanner(System.in);
+		//Scanner input = new Scanner(System.in);
+		FastScanner input = new FastScanner(System.in);
 
 		while (input.hasNext()) {
 			int N = input.nextInt();
