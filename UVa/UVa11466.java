@@ -20,33 +20,33 @@ public class UVa11466 {
 		}
 	}
 
-	public static long largestPrimeDivisor(long N) {
-		int sqrtN = (int) Math.sqrt(N);
+	public static long largestPrimeDivisor(long n) {
+		int sqrtN = (int) Math.sqrt(n);
 		long largestPrimeDivisor = -1;
 		int primeDivisorNum = 0;
 
-		if (N != 2) {
-			if (N % 2 == 0) {
+		if (n != 2) {
+			if (n % 2 == 0) {
 				++primeDivisorNum;
 				largestPrimeDivisor = 2;
-				while (N % 2 == 0) {
-					N /= 2;
+				while (n % 2 == 0) {
+					n /= 2;
 				}
 			}
 		}
 
-		for (int i = 3; i <= sqrtN && N != 1; i += 2) {
-			if (N % i == 0) {
+		for (int i = 3; i <= sqrtN && n != 1; i += 2) {
+			if (n % i == 0) {
 				++primeDivisorNum;
 				largestPrimeDivisor = i;
-				while (N % i == 0) {
-					N /= i;
+				while (n % i == 0) {
+					n /= i;
 				}
 			}
 		}
 
-		if (N != 1 && largestPrimeDivisor != -1) {
-			return N;
+		if (n != 1 && largestPrimeDivisor != -1) {
+			return n;
 		} else if (primeDivisorNum == 1) {
 			return -1;
 		} else {
