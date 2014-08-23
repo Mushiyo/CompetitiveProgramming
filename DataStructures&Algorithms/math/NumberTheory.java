@@ -83,7 +83,7 @@ public class NumberTheory {
 	public static ArrayList<Integer> factor(int n) {
 		ArrayList<Integer> factor = new ArrayList<Integer>();
 
-		for (int i = 1; i <= n; ++i) {
+		for (int i = 2; i <= n; ++i) {
 			if (n % i == 0) {
 				factor.add(i);
 			}
