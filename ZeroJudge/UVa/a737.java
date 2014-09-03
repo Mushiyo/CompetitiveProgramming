@@ -1,4 +1,3 @@
-// NA (MLE)
 /* Filename: a737.java
  * Author: Mushiyo
  */

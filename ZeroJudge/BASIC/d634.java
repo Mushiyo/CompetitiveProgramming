@@ -7,16 +7,18 @@ public class d634 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int n = input.nextInt();
-		TreeSet<String> spell = new TreeSet<String>();
+		String spell[] = new String[100000];
 		
 		input.nextLine();//¦Y±¼´«¦æ²Å¸¹
 		
 		for(int i = 0; i < n; ++i){
-			spell.add(input.nextLine());
-		}			
+			spell[i] = input.nextLine();
+		}
 		
-		for(String i : spell){
-			System.out.println(i);
+		Arrays.sort(spell, 0, n);
+		
+		for(int i = 0; i < n; ++i){
+			System.out.println(spell[i]);
 		}
 		
 	}
