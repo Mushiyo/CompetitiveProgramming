@@ -1,3 +1,5 @@
+// NA (WA) -0.0
+
 package BASIC;
 
 import java.util.Scanner;

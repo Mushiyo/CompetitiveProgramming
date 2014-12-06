@@ -28,12 +28,12 @@ public class d134 {
 	}
 	
 	private static long combination(int n, int m) {
-		long c = 1;
+		double c = 1;
 
 		for (int i = Math.max(m, n - m) + 1, j = 1; i <= n; ++i, ++j) {
 			c = (c * i) / j;
 		}
 
-		return c;
+		return (long)c;
 	}
 }
