@@ -1,21 +1,32 @@
-// sieve too small
-
 /* Filename: UVa443.java
  * Author: Mushiyo
  */
 
-import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class UVa443 {
 
 	public static void main(String[] args) {
-		int[] humbleNum = new int[5842 + 1];
-		int index = 0;
+		long[] humbleNum = new long[5842 + 1];
+		final int[] factors = { 2, 3, 5, 7 };
+		PriorityQueue<Long> pq = new PriorityQueue<Long>(Arrays.asList(1L));
+		Set<Long> apperedUglyNumbers = new HashSet<Long>();
 
-		for (int i = 2; i <= 2000000000; ++i) {
-			if (i % 2 == 0 || i % 3 == 0 || i % 5 == 0 || i % 7 == 0) {
-				humbleNum[index++] = i;
+		// find all humble numbers between 1 ~ 5842
+		int countUgly = 1;
+		while (countUgly < humbleNum.length) {
+			long currentUgly = pq.poll();
+
+			if (!apperedUglyNumbers.contains(currentUgly)) {
+				humbleNum[countUgly++] = currentUgly;
+				apperedUglyNumbers.add(currentUgly);
+				for (int i = 0; i < factors.length; ++i) {
+					pq.add(currentUgly * factors[i]);
+				}
 			}
 		}
 
@@ -23,6 +34,10 @@ public class UVa443 {
 
 		while (input.hasNext()) {
 			int n = input.nextInt();
+			
+			if(n == 0){
+				break;
+			}
 
 			if (n % 100 < 11 || n % 100 > 20) {
 				switch (n % 10) {

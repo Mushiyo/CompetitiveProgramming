@@ -1,38 +1,34 @@
-// RE
-
 /* Filename: UVa136.java
  * Author: Mushiyo
  */
 
-
 import java.util.Scanner;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.Arrays;
 
 public class UVa136 {
 
 	public static void main(String[] args) {
-		System.out.printf("The 1500'th ugly number is %d.\n", ugly1500());		
-	}
-	
-	static int ugly1500(){
-		boolean[] isUgly = new boolean[3000];
-		isUgly[1] = true;
-		int[] factor = {2, 3, 5};
-		
-		for(int i = 0; i < factor.length; ++i){
-			for(int j = factor[i]; j < isUgly.length; j += factor[i]){
-				isUgly[j] = true;
-			}
-		}
-		
+		final int[] factors = { 2, 3, 5 };
+		PriorityQueue<Long> pq = new PriorityQueue<Long>(Arrays.asList(1L));
+		Set<Long> apperedUglyNumbers = new HashSet<Long>();
+
 		int countUgly = 0;
-		int i = 0;
-		
-		for(; i < isUgly.length && countUgly < 1500; ++i){
-			if(isUgly[i]){
+		long currentUgly = 0;
+		while (countUgly < 1500) {
+			currentUgly = pq.poll();
+
+			if (!apperedUglyNumbers.contains(currentUgly)) {
 				++countUgly;
+				apperedUglyNumbers.add(currentUgly);
+				for (int i = 0; i < factors.length; ++i) {
+					pq.add(currentUgly * factors[i]);
+				}
 			}
 		}
-		
-		return i;
+
+		System.out.printf("The 1500'th ugly number is %d.\n", currentUgly);
 	}
 }
