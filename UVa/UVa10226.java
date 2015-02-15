@@ -54,6 +54,7 @@ public class UVa10226 {
 			String ret = null;
 			try {
 				ret = br.readLine();
+				
 				if(ret == null){
 					ret = "";
 				}
@@ -74,7 +75,6 @@ public class UVa10226 {
 
 		while (input.hasNext()) {
 			int n = input.nextInt();
-			input.nextLine(); // eat change line
 			input.nextLine(); // eat the first empty line 
 
 			while (n > 0) {
