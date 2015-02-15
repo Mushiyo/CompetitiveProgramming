@@ -1,17 +1,17 @@
-// TLE
-
 /* Filename: UVa10763.java
  * Author: Mushiyo
  */
 
 import java.util.Scanner;
-import java.util.Set;
-import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
+import java.awt.Point;
 
 public class UVa10763 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		Map<Point, Integer> waitPairing = new HashMap<Point, Integer>();
 
 		while (input.hasNext()) {
 			int n = input.nextInt();
@@ -20,40 +20,37 @@ public class UVa10763 {
 				break;
 			}
 
-			Set<Pair> waitParing = new HashSet<Pair>();
+			waitPairing.clear();
 
 			while (n > 0) {
-				Pair p = new Pair(input.nextInt(), input.nextInt());
+				Point p = new Point(input.nextInt(), input.nextInt());
+				Point revP = new Point(p.y, p.x);
 
-				if (waitParing.contains(Pair.reverse(p))) {
-					waitParing.remove(Pair.reverse(p));
+				if (waitPairing.containsKey(revP)) {
+					int numOfPeople = waitPairing.get(revP);
+					if (numOfPeople > 1) {
+						--numOfPeople;
+						waitPairing.put(revP, numOfPeople);
+					} else {
+						waitPairing.remove(revP);
+					}
 				} else {
-					waitParing.add(p);
+					if (waitPairing.containsKey(p)) {
+						int numOfPeople = waitPairing.get(p) + 1;
+						waitPairing.put(p, numOfPeople);
+					} else {
+						waitPairing.put(p, 1);
+					}
 				}
 
 				--n;
 			}
 
-			if (waitParing.isEmpty()) {
+			if (waitPairing.isEmpty()) {
 				System.out.println("YES");
 			} else {
 				System.out.println("NO");
 			}
 		}
 	}
-
-	static private class Pair {
-		int original;
-		int target;
-
-		Pair(int original, int target) {
-			this.original = original;
-			this.target = target;
-		}
-
-		static Pair reverse(Pair p) {
-			return new Pair(p.target, p.original);
-		}
-	}
-
 }
