@@ -1,3 +1,6 @@
+/* Filename: d713.java
+ * Author: Mushiyo
+ */
 package UVa;
 
 import java.util.Collections;
@@ -5,17 +8,17 @@ import java.util.PriorityQueue;
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class c010 {
+public class d713 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		PriorityQueue<Integer> smallHalf = new PriorityQueue<Integer>(1,
+		PriorityQueue<Long> smallHalf = new PriorityQueue<Long>(1,
 				Collections.reverseOrder()); // a max-heap
-		PriorityQueue<Integer> largeHalf = new PriorityQueue<Integer>(); // a min-heap
+		PriorityQueue<Long> largeHalf = new PriorityQueue<Long>(); // a min-heap
 
 		boolean isEven = true;
 		while (input.hasNext()) {
-			int number = input.nextInt();
+			long number = input.nextLong();
 			isEven = !isEven;
 
 			if (largeHalf.isEmpty()) {
@@ -26,8 +29,8 @@ public class c010 {
 				smallHalf.add(number);
 
 				while (smallHalf.peek() > largeHalf.peek()) {
-					int tmp1 = smallHalf.poll();
-					int tmp2 = largeHalf.poll();
+					long tmp1 = smallHalf.poll();
+					long tmp2 = largeHalf.poll();
 					smallHalf.add(tmp2);
 					largeHalf.add(tmp1);
 				}
