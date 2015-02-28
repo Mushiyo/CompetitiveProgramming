@@ -1,11 +1,11 @@
-/* Filename: UVa10935.java
+/* Filename: UVa10935Sol1.java
  * Author: Mushiyo
  */
 
 import java.util.Scanner;
 import java.util.Arrays;
 
-public class UVa10935 {
+public class UVa10935Sol1 {
 	final static int MAX_N = 50 + 1; 
 	static boolean[] cardInDeck = new boolean[MAX_N];
 	static int[] discardedCard = new int[MAX_N]; 
