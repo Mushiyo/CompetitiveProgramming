@@ -1,4 +1,3 @@
-//TLE
 import java.util.*;
 
 public class Timus1001 {
