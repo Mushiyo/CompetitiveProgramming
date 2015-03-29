@@ -1,4 +1,4 @@
-//TLE
+//WA
 package BASIC;
 
 import java.util.Scanner;
@@ -13,6 +13,7 @@ public class a291 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
+		StringBuilder output = new StringBuilder();
 
 		while (input.hasNext()) {
 			Arrays.fill(ansNumCount, 0);
@@ -62,7 +63,7 @@ public class a291 {
 
 				q -= p;
 
-				System.out.println(p + "A" + q + "B");
+				output.append(String.format("%dA%dB\n", p, q));
 
 				--n;
 			}
@@ -72,5 +73,6 @@ public class a291 {
 				input.nextLine();
 			}
 		}
+		System.out.print(output);
 	}
 }

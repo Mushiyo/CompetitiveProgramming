@@ -1,25 +1,28 @@
-//RE
+// RE
+
 package BASIC;
 
 import java.util.Scanner;
-import java.math.BigDecimal;;
+import java.math.BigDecimal;
+
+;
 
 public class d468 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		
-		while(input.hasNext()){
-			BigDecimal a = input.nextBigDecimal();
+
+		while (input.hasNext()) {
+			int a = input.nextInt();
 			int n = input.nextInt();
-			System.out.println(n);
-			
-			if(a.compareTo(BigDecimal.ZERO) == 0 && n == 0){
+
+			if (a == 0 && n == 0) {
 				System.out.println("All Over.");
 				break;
+			} else {
+
+				System.out.printf(String.format("%.0f\n", Math.pow(a, n)));
 			}
-			
-			System.out.println(a.pow(n));
 		}
 	}
 
