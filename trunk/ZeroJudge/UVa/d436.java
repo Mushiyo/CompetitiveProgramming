@@ -1,10 +1,11 @@
-// RE
+// RE WA
 
 /* Filename: d436.java
  * Author: Mushiyo
  */
 package UVa;
 
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -13,24 +14,31 @@ public class d436 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		StringBuilder out = new StringBuilder();
+		String s = "";
 
 		while (input.hasNext()) {
 			int n = input.nextInt();
 
 			while (n > 0) {
-				char[] str = input.next().toCharArray();
-				Arrays.sort(str);
-				
-				do{
-					out.append(str);
-					out.append('\n');
-				} while(nextPermutation(str));
-				out.append('\n');
+				try {
+					s = input.next();
+					char[] str = s.toCharArray();
+					Arrays.sort(str);
 
-				--n;
+					do {
+						out.append(str);
+						out.append('\n');
+					} while (nextPermutation(str));
+					out.append('\n');
+
+					--n;
+				} catch (NoSuchElementException e) {
+					System.out.println(s);
+					System.out.println(n);
+				}
 			}
 		}
-		
+
 		System.out.print(out);
 	}
 
