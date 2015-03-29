@@ -1,3 +1,7 @@
+/* Filename: a667.java
+ * Author: Mushiyo
+ */
+
 package BASIC;
 
 import java.util.Scanner;
