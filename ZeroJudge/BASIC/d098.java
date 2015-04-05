@@ -1,5 +1,3 @@
-// WA
-
 /* Filename: d098.java
  * Author: Mushiyo
  */
