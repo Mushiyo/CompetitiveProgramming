@@ -12,7 +12,6 @@ public class UVa400 {
 
 		while (input.hasNext()) {
 			int N = input.nextInt();
-			//input.nextLine(); // eat new line
 			String[] filenames = new String[N];
 			int L = 0;
 
@@ -25,10 +24,8 @@ public class UVa400 {
 
 			int C = (60 - L) / (L + 2) + 1;
 			int R = (int) Math.ceil((double) N / C);
-			// System.out.println(C + " " + R + " " + L);
 
-			System.out
-					.println("------------------------------------------------------------");
+			System.out.println("------------------------------------------------------------");
 
 			for (int r = 0; r < R; ++r) {
 				for (int c = 0; c < C; ++c) {
