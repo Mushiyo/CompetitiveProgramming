@@ -9,7 +9,7 @@ import java.util.*;
 public class R1A2014A {
 
 	public static void main(String[] args) throws Exception {
-		Scanner input = new Scanner(new File("A-large.in"));
+		Scanner input = new Scanner(new File("A-large-practice.in"));
 		PrintWriter out = new PrintWriter(new File("pA.out"));
 
 		while (input.hasNext()) {
