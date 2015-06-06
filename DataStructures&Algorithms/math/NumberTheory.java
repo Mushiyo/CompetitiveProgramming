@@ -15,6 +15,17 @@ import java.util.Arrays;
 
 public class NumberTheory {
 	/**
+	 * Return true if {@code n} is a integer
+	 * 
+	 * @param num
+	 * 				a float number
+	 * @return true if {@code n} is a integer; else return false
+	 */
+	public static boolean isInteger(double n){
+		return Math.ceil(n) == Math.floor(n);
+	}
+	
+	/**
 	 * Return the sum of digitis of {@code n}
 	 * 
 	 * @param n
