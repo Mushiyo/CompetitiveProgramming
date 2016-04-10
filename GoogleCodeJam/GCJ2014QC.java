@@ -1,4 +1,4 @@
-/* Filename: Q2014C.java
+/* Filename: GCJ2014QC.java
  * Author: Mushiyo
  */
 
@@ -7,7 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class Q2014C {
+public class GCJ2014QC {
 
 	public static void main(String[] args) throws Exception {
 		Scanner input = new Scanner(new File("pC.in"));

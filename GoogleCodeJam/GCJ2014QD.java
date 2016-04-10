@@ -1,4 +1,4 @@
-/* Filename: Q2014D.java
+/* Filename: GCJ2014QD.java
  * Author: Mushiyo
  */
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 
-public class Q2014D {
+public class GCJ2014QD {
 
 	public static void main(String[] args) throws Exception {
 		Scanner input = new Scanner(new File("D-large.in"));

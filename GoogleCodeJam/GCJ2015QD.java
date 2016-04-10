@@ -1,6 +1,6 @@
 // WA on large
 
-/* Filename: Q2015D.java
+/* Filename: GCJ2015QD.java
  * Author: Mushiyo
  */
 
@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Q2015D {
+public class GCJ2015QD {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		// Scanner input = new Scanner(System.in);

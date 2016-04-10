@@ -1,6 +1,6 @@
 // TLE on large
 
-/* Filename: Q2015C.java
+/* Filename: GCJ2015QC.java
  * Author: Mushiyo
  */
 
@@ -9,7 +9,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Q2015C {
+public class GCJ2015QC {
 	final static int I = 2, J = 3, K = 4;
 
 	public static void main(String[] args) throws FileNotFoundException {

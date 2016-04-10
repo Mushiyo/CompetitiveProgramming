@@ -1,4 +1,4 @@
-/* Filename: R1A2014A.java
+/* Filename: GCJ2014R1A_A.java
  * Author: Mushiyo
  */
 
@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class R1A2014A {
+public class GCJ2014R1A_A {
 
 	public static void main(String[] args) throws Exception {
 		Scanner input = new Scanner(new File("A-large-practice.in"));
