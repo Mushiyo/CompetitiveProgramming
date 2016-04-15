@@ -1,5 +1,5 @@
 // WA
-/* Filename: Q2015_15.java
+/* Filename: FB2015Q_CookingTheBooks.java
  * Author: Mushiyo
  */
 
@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class Q2015_15 {
+public class FB2015Q_CookingTheBooks {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner input = new Scanner(new File(

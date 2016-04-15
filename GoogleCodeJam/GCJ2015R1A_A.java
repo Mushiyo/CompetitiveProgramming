@@ -1,4 +1,4 @@
-/* Filename: R1A2015A.java
+/* Filename: GCJ2015R1A_A.java
  * Author: Mushiyo
  */
 
@@ -7,12 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
-public class R1A2015A {
+public class GCJ2015R1A_A {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		//Scanner input = new Scanner(System.in);
-		Scanner input = new Scanner(new File("R1A2015A-large.in"));
-		PrintWriter out = new PrintWriter(new File("R1A2015A.out"));
+		Scanner input = new Scanner(new File("GCJ2015R1A_A-large.in"));
+		PrintWriter out = new PrintWriter(new File("GCJ2015R1A_A.out"));
 
 		while (input.hasNext()) {
 			int T = input.nextInt();

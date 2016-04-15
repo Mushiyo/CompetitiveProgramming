@@ -1,6 +1,6 @@
 // WA
 
-/* Filename: R1C2015A.java
+/* Filename: GCJ2015R1C_A.java
  * Author: Mushiyo
  */
 
@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.PrintWriter;
 import java.util.*;
 
-public class R1C2015A {
+public class GCJ2015R1C_A {
 	static int[][] sol = {{},{0,1},{0,2,2},{0,3,3,3},{0,4,3,4,4},{0,5,4,4,5,5},{0,6,4,4,5,6,6},{0,7,5,5,5,6,7,7},{0,8,5,5,5,6,7,8,8},{0,9,6,6,6,6,7,8,9,9},{0,10,6,6,6,6,7,8,9,10,10}};
 
 	public static void main(String[] args) throws Exception {

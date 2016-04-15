@@ -1,6 +1,6 @@
 // WA on large
 
-/* Filename: R1A2015B.java
+/* Filename: GCJ2015R1A_B.java
  * Author: Mushiyo
  */
 
@@ -10,12 +10,12 @@ import java.io.PrintWriter;
 import java.util.*;
 import java.util.*;
 
-public class R1A2015B {
+public class GCJ2015R1A_B {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		//Scanner input = new Scanner(System.in);
-		Scanner input = new Scanner(new File("R1A2015B-large-practice.in"));
-		PrintWriter out = new PrintWriter(new File("R1A2015B.out"));
+		Scanner input = new Scanner(new File("GCJ2015R1A_B-large-practice.in"));
+		PrintWriter out = new PrintWriter(new File("GCJ2015R1A_B.out"));
 		PriorityQueue<Barber> pq = new PriorityQueue();
 
 		while (input.hasNext()) {

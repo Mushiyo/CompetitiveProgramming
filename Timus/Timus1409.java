@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Timus1049 {
+public class Timus1409 {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
