@@ -1,0 +1,26 @@
+/* Filename: ABC044A.java
+ * Author: Mushiyo
+ */
+
+import java.util.Scanner;
+
+public class ABC044A {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		while (input.hasNext()) {
+			int N = input.nextInt();
+			int K = input.nextInt();
+			int X = input.nextInt();
+			int Y = input.nextInt();
+			
+			if(N <= K){
+				System.out.println(N * X);
+			} else {
+				System.out.println(K * X + (N - K) * Y);
+			}
+		}
+	}
+
+}
