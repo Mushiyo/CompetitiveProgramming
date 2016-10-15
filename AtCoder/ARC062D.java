@@ -1,0 +1,38 @@
+/* Filename: ARC062D.java
+ * Author: Mushiyo
+ */
+
+import java.util.Scanner;
+
+public class ARC062D {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		while (input.hasNext()) {
+			String S = input.next();
+
+			int countP = 0, countG = 0;
+			int win = 0, lose = 0;
+			for (int i = 0; i < S.length(); ++i) {
+				if (countP + 1 <= countG) {
+					++countP;
+
+					if (S.charAt(i) == 'g') {
+						++win;
+					}
+					
+				} else {
+					++countG;
+					
+					if (S.charAt(i) == 'p') {
+						++lose;
+					}
+				}
+			}
+
+			System.out.println(win - lose);
+		}
+	}
+
+}
