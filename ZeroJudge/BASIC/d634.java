@@ -9,7 +9,7 @@ public class d634 {
 		int n = input.nextInt();
 		String spell[] = new String[100000];
 		
-		input.nextLine();//¦Y±¼´«¦æ²Å¸¹
+		input.nextLine();//åƒæ‰æ›è¡Œç¬¦è™Ÿ
 		
 		for(int i = 0; i < n; ++i){
 			spell[i] = input.nextLine();

@@ -29,11 +29,11 @@ public class d466 {
 			}
 			
 			int countDays = 0;
-			//╔Щ╜p╨Б╕bmonth╓К╓╖╚e╙╨╘р╕Ё╓К╔В╙╨╓я╪фа`╕X
+			//Е┘┬Х╗┬Г╝≈Е°╗monthФ°┬Д╧▀Е┴█Г └Ф┴─Ф°┴Ф°┬Д╩╫Г └Е╓╘Ф∙╦Г╦╫Е░┬
 			for(int m = 1; m < month; ++m){
 				countDays += daysInMonth[m - 1];
 			}
-			//╕]╛╟╓w╦g╨Б╓F╓╖╚e╘р╕Ё╓К╔В╙╨╓я╪фа`╕X║A╘р╕A╔[╓Wday╖Y╔i╨Б╔Xmonth╓Кday╓И╛O╡д╢X╓я
+			//Е⌡═Г┌╨Е╥╡Г╤⌠Г╝≈Д╨├Д╧▀Е┴█Ф┴─Ф°┴Ф°┬Д╩╫Г └Е╓╘Ф∙╦Г╦╫Е░┬О╪▄Ф┴─Е├█Е┼═Д╦┼dayЕ█ЁЕ▐╞Г╝≈Е┤╨monthФ°┬dayФ≈╔Ф≤╞Г╛╛Е╧╬Е╓╘
 			countDays += day;
 			
 			if(countDays > 1){

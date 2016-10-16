@@ -12,13 +12,13 @@ public class d010 {
 			int S = sumOfDivisors(N);
 			
 			if(S > N){
-				System.out.println("¬Õ¼Æ");
+				System.out.println("ç›ˆæ•¸");
 			}
 			else if(S < N){
-				System.out.println("Á«¼Æ");
+				System.out.println("è™§æ•¸");
 			}
 			else{
-				System.out.println("§¹¥þ¼Æ");
+				System.out.println("å®Œå…¨æ•¸");
 			}
 		}
 	}

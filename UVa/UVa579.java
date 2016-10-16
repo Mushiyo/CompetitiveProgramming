@@ -17,7 +17,7 @@ public class UVa579 {
 			int H = Integer.parseInt(tok.nextToken());
 			int M = Integer.parseInt(tok.nextToken());
 			
-            //let 12 be 0¢X, 3 be 90¢X ...
+            //let 12 be 0Â°, 3 be 90Â° ...
 			double angleBetweenHM = Math.abs(M * 6 - ((H % 12) * 30 + 0.5 * M));
 			if(angleBetweenHM > 180){
 				System.out.printf("%.3f\n", 360 - angleBetweenHM);

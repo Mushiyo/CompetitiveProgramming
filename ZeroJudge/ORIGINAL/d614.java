@@ -8,7 +8,7 @@ public class d614 {
 		Scanner input = new Scanner(System.in);
 
 		int T = Integer.parseInt(input.nextLine());
-		//¦pªG¥ÎnextInt§ì¡A«h±µ¤U¨ÓªºnextLine()·|§ì¨ìªÅ¦r¦ê(³o¬Odebug®É¬Ý¨ìªº¡A§Ú¤£²M·¡¬°¤°»ò·|³o¼Ë)¡A©Ò¥H³o¸Ì±Ä¥Î³oºØ¤è¦¡
+		//å¦‚æžœç”¨nextIntæŠ“ï¼Œå‰‡æŽ¥ä¸‹ä¾†çš„nextLine()æœƒæŠ“åˆ°ç©ºå­—ä¸²(é€™æ˜¯debugæ™‚çœ‹åˆ°çš„ï¼Œæˆ‘ä¸æ¸…æ¥šç‚ºä»€éº¼æœƒé€™æ¨£)ï¼Œæ‰€ä»¥é€™è£¡æŽ¡ç”¨é€™ç¨®æ–¹å¼
 		while (T > 0) {
 			StringTokenizer arithmeticExpression = new StringTokenizer(
 					input.nextLine(), "+");

@@ -15,10 +15,10 @@ public class d155 {
 			
 			if(purple.equals("Game")){
 				if(dreamWin > purpleWin){
-					System.out.println("´dºGªºÄw±¹°_­»ªo¿ú");
+					System.out.println("æ‚²æ…˜çš„ç±Œæªèµ·é¦™æ²¹éŒ¢");
 				}
 				else{
-					System.out.println("¿Ã¤õªºÂÜ¸ñ" );
+					System.out.println("è¢ç«çš„è¹¤è·¡" );
 				}
 				break;
 			}
@@ -26,31 +26,31 @@ public class d155 {
 			if(purple.equals("Paper")){
 				if(dream.equals("Stone")){
 					++purpleWin;
-					System.out.println("µµÀò³Ó");
+					System.out.println("ç´«ç²å‹");
 				}
 				else if(dream.equals("Scissors")){
 					++dreamWin;
-					System.out.println("ÆF¹ÚÀò³Ó");
+					System.out.println("éˆå¤¢ç²å‹");
 				}
 			}
 			else if(purple.equals("Scissors")){
 				if(dream.equals("Stone")){
 					++dreamWin;
-					System.out.println("ÆF¹ÚÀò³Ó");
+					System.out.println("éˆå¤¢ç²å‹");
 				}
 				else if(dream.equals("Paper")){
 					++purpleWin;
-					System.out.println("µµÀò³Ó");
+					System.out.println("ç´«ç²å‹");
 				}
 			}
 			else{//purple == stone
 				if(dream.equals("Paper")){
 					++dreamWin;
-					System.out.println("ÆF¹ÚÀò³Ó");
+					System.out.println("éˆå¤¢ç²å‹");
 				}
 				else if(dream.equals("Scissors")){
 					++purpleWin;
-					System.out.println("µµÀò³Ó");
+					System.out.println("ç´«ç²å‹");
 				}
 			}
 			

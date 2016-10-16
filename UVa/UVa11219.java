@@ -7,10 +7,10 @@ public class UVa11219 {
 		int N = input.nextInt();
 		int caseNum = 1;
 		
-		input.nextLine();//¦Y±¼´«¦æ²Å¸¹
+		input.nextLine();//åƒæ‰æ›è¡Œç¬¦è™Ÿ
 		
 		while(N > 0){
-			input.nextLine();//¦Y±¼ªÅ¦æ
+			input.nextLine();//åƒæ‰ç©ºè¡Œ
 			String[] dateTodayStr = input.nextLine().trim().split("/");
 			int[] dateToday = new int[3];
 			for(int i = 0; i < dateToday.length; ++i){

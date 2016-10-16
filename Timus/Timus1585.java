@@ -13,7 +13,7 @@ public class Timus1585 {
 			String mostNumerousPenguin = "";
 			
 			int n = input.nextInt();
-			input.nextLine();//¦Y±¼´«¦æ²Å¸¹
+			input.nextLine();//åƒæŽ‰æ›è¡Œç¬¦è™Ÿ
 			while (n > 0) {
 				String nameOfPenguin = input.nextLine();
 

@@ -13,7 +13,7 @@ public class b103 {
 			int n = input.nextInt();
 			int w = input.nextInt();
 			int h = input.nextInt();
-			input.nextLine();//¦Y±¼ªÅ¦r¦ê
+			input.nextLine();//åƒæ‰ç©ºå­—ä¸²
 			
 			ArrayList<String[]> monPics = new ArrayList<String[]>(m);
 			
