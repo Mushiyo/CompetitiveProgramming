@@ -15,8 +15,8 @@ public class b096 {
 			int devilAtk = input.nextInt();
 			int devilDef = input.nextInt();
 			
-			/*�]���D�ؤ������o�ǼƦr����1��10000�A�ҥH�u�n�䤤�@�ӼƦr��0�A
-			 * �N�N������@�w�O�{�����������@��A�ҥH�u�ˬd�@�ӴN�n
+			/*因為題目中有說這些數字介於1到10000，所以只要其中一個數字為0，
+			 * 就代表那行一定是程式結束的那一行，所以只檢查一個就好
 			 */
 			if(playerLife == 0){
 				break;

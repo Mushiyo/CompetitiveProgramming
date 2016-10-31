@@ -21,7 +21,7 @@ public class Timus1493 {
 
 	public static boolean isLuckyTicket(int ticketNum) {
 		String stringTicketNum = Integer.toString(ticketNum);
-		//¤£¨¬6¦ì¼Æ¸É0
+		//ä¸è¶³6ä½æ•¸è£œ0
 		while(stringTicketNum.length() < 6){
 			stringTicketNum = "0" + stringTicketNum;
 		}

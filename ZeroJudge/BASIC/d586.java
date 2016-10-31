@@ -10,7 +10,7 @@ public class d586 {
 		int n = input.nextInt();
 		
 		while(n > 0){
-			int length = input.nextInt();//¦Y±¼¼Æ¦r
+			int length = input.nextInt();//åƒæŽ‰æ•¸å­—
 			
 			if(input.hasNextInt()){
 				while(length  > 0){

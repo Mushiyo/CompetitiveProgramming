@@ -13,7 +13,7 @@ public class b186 {
 			int cake = input.nextInt();
 			chocolate += giftChocolate(cookie, cake);
 			
-			System.out.println(cookie + " ­Ó»æ°®¡A" + chocolate + " ²°¥©§J¤O¡A" + cake + " ­Ó³J¿|¡C");
+			System.out.println(cookie + " å€‹é¤…ä¹¾ï¼Œ" + chocolate + " ç›’å·§å…‹åŠ›ï¼Œ" + cake + " å€‹è›‹ç³•ã€‚");
 		}
 	}
 	

@@ -7,7 +7,7 @@ public class d267 {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int numOfLine = input.nextInt();
-		input.nextLine();//¦Y±¼´«¦æ²Å¸¹
+		input.nextLine();//åƒæŽ‰æ›è¡Œç¬¦è™Ÿ
 		
 		while(numOfLine > 0){
 			String aLine = input.nextLine();

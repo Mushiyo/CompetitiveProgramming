@@ -24,7 +24,7 @@ public class d478 {
 			}
 			
 			Set<Integer> commonNum = new HashSet<Integer>(panNum);
-			commonNum.retainAll(flowerNum);//¨ú¤p¼ï¸ò¤pªáªº¥æ¶°
+			commonNum.retainAll(flowerNum);//å–å°æ½˜è·Ÿå°èŠ±çš„äº¤é›†
 			
 			System.out.println(commonNum.size());
 			

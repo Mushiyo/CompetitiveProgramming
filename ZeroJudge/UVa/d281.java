@@ -9,11 +9,11 @@ public class d281 {
 		long n = input.nextLong();
 		
 		while(n != -1){
-			//the surface area of a sphere is 4£kr^2
-			//each part of the divided sphere will increase the surface area by £kr^2
+			//the surface area of a sphere is 4Ï€r^2
+			//each part of the divided sphere will increase the surface area by Ï€r^2
 			//, which is the area of the two hemicycle on each divided part. 
-			//so the profit is ((n * £kr^2) / 4£kr^2) * 100%, n ¡Ù 2
-			//after simplified the equation, we got n * 25 %, n ¡Ù 2
+			//so the profit is ((n * Ï€r^2) / 4Ï€r^2) * 100%, n â‰§ 2
+			//after simplified the equation, we got n * 25 %, n â‰§ 2
 			//NOTE that when n = 1, the profit is 0%
 			
 			if(n > 1){

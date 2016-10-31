@@ -14,10 +14,10 @@ public class d411 {
 			int N = input.nextInt();
 
 			if (bigNum.mod(new BigInteger("2").pow(N)).equals(BigInteger.ZERO)) {
-				System.out.println("YA!!²×©óºâ¥X" + M + "¥i³Q2ªº" + N + "¦¸¾ã°£¤F!!");
+				System.out.println("YA!!çµ‚æ–¼ç®—å‡º" + M + "å¯è¢«2çš„" + N + "æ¬¡æ•´é™¤äº†!!");
 			}
 			else {
-				System.out.println("¥i´c!!ºâ¤F³o»ò¤[" + M + "³ºµMµLªk³Q2ªº" + N + "¦¸¾ã°£");
+				System.out.println("å¯æƒ¡!!ç®—äº†é€™éº¼ä¹…" + M + "ç«Ÿç„¶ç„¡æ³•è¢«2çš„" + N + "æ¬¡æ•´é™¤");
 			}
 		}
 	}

@@ -19,7 +19,7 @@ public class a015 {
 				}				
 			}
 						
-			//¦L¥XÂà¸m¯x°}™£
+			//å°å‡ºè½‰ç½®çŸ©é™£î¨‘
 			for(int r = 0 ; r < columns; ++r){
 				System.out.print(array[0][r]);
 				for(int c = 1 ; c < array.length; ++c){

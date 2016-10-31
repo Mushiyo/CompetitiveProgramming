@@ -9,8 +9,8 @@ public class a038 {
 
 		while (input.hasNext()) {
 			StringBuilder num = new StringBuilder(input.next());
-			num = deleteLeadingZero(num).reverse(); //±N¦r¦ê¥h±¼¶}ÀYªº0«á¤ÏÂà 
-			num = deleteLeadingZero(num);//±N¤ÏÂà«áªº¦r¦ê¥h±¼¶}ÀYªº0
+			num = deleteLeadingZero(num).reverse(); //å°‡å­—ä¸²å»æ‰é–‹é ­çš„0å¾Œåè½‰ 
+			num = deleteLeadingZero(num);//å°‡åè½‰å¾Œçš„å­—ä¸²å»æ‰é–‹é ­çš„0
 
 			System.out.println(num);
 		}

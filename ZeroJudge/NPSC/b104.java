@@ -8,7 +8,7 @@ public class b104 {
 		Scanner input = new Scanner(System.in);
 		int N = input.nextInt();
 		
-		input.nextLine();//¦Y±¼´«¦æ²Å¸¹
+		input.nextLine();//åƒæŽ‰æ›è¡Œç¬¦è™Ÿ
 		
 		while(N > 0){
 			String before = input.nextLine();

@@ -12,7 +12,7 @@ public class Timus1563 {
 			Set<String> store = new HashSet<String>(N);
 			int BayanTimes = 0;
 			
-			input.nextLine();//¦Y±¼´«¦æ²Å¸¹
+			input.nextLine();//åƒæŽ‰æ›è¡Œç¬¦è™Ÿ
 			while(N > 0){
 				String storeName = input.nextLine();
 				
