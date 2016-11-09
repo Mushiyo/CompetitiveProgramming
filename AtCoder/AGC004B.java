@@ -1,3 +1,4 @@
+// WA
 /* Filename: AGC004B.java
  * Author: Mushiyo
  */
