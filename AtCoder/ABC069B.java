@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class ABC069B {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		
+		while(input.hasNext()){
+			String s = input.next();
+			
+			System.out.printf("%c%d%c\n", s.charAt(0), s.substring(1, s.length() - 1).length(), s.charAt(s.length() - 1));
+		}
+
+	}
+
+}
